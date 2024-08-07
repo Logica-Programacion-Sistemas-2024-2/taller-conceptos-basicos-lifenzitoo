@@ -3,9 +3,6 @@
  */
 package sistemas;
 
-import java.sql.PseudoColumnUsage;
-import java.util.Scanner;
-
 public class App {
     
     // Diseñe un algoritmo para saludar al usuario: Hola usuario. El nombre del usuario es ingresado por teclado
@@ -79,8 +76,8 @@ public class App {
     // retorne el valor en formato string (pesoEnKg + "|" + pesoEnToneladas)
     public static String calcularPesoNeto(double peso) {
         try {
-            int pesoEnKg = (int) peso;
-            int pesoEnToneladas = (int) (peso * 0);
+            int pesoEnKg = (int) (peso / 1000);
+            int pesoEnToneladas = (int) (pesoEnKg / 1000);
             return pesoEnKg + "|" + pesoEnToneladas;
         } catch (Exception e) {
             return "0|0";
